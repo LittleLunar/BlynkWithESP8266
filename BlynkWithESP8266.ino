@@ -5,8 +5,8 @@
 #define BLYNK_AUTH_TOKEN ""
 // THESE VALUES' TAKEN FROM Blynk
 
-#define MY_WIFI_NAME "YOUR_WIFI"
-#define MY_WIFI_PASS "YOUR_WIFI_PASS"
+#define MY_WIFI_NAME "YourWiFiName"
+#define MY_WIFI_PASS "YourWiFiPass"
 
 #define BLYNK_PRINT Serial
 
@@ -14,9 +14,9 @@
 #include <BlynkSimpleEsp8266.h>
 #include <SimpleDHT.h>
 
-char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = MY_WIFI_NAME;
-char pass[] = MY_WIFI_PASS;
+const char* auth = BLYNK_AUTH_TOKEN;
+const char* ssid = MY_WIFI_NAME;
+const char* pass = MY_WIFI_PASS;
 
 int pindht11 = D4;
 SimpleDHT11 dht11;

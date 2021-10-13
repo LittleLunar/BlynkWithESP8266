@@ -21,7 +21,8 @@ const char* pass = MY_WIFI_PASS;
 int pindht11 = D4;
 SimpleDHT11 dht11;
 
-void setup() {
+void setup() 
+{
   Serial.begin(115200);
 
   // connect ESP8266 to Blynk with your TOKEN
@@ -29,13 +30,15 @@ void setup() {
 
 }
 
-void loop() {
+void loop() 
+{
   Blynk.run();
 
   byte temperature = 0;
   byte humidty = 0;
   int err = SimpleDHTErrSuccess;
-  if(( err = dht11.read(pindht11, &temperature, &humidity, NULL)) != SimpleDHTErrSuccess) {
+  if(( err = dht11.read(pindht11, &temperature, &humidity, NULL)) != SimpleDHTErrSuccess) 
+  {
     Serial.print(" Read DHT11 failed, err = ");
     Serial.println(err);
     delay(1000);
